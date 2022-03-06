@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from mobilitiworld.com//products by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Dec 2021 06:43:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, intial-scale=1">
+		<title>Mobilitiworld || Products</title>
+		<meta name="keyword" content="">
+		<meta name="description" content="">
+        <link rel="shortcut icon" type="image/icon" sizes="35x35" href="img/favicon.png">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/fontawesome-all.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--<link rel="stylesheet" type="text/css" href="https://mobilitiworld.com//css/owl.carousel.css">-->
+<!--<link rel="stylesheet" type="text/css" href="https://mobilitiworld.com//css/owl.theme.css">-->
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<!--<link rel="stylesheet" type="text/css" href="https://mobilitiworld.com//loader-style.css">-->
+<link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+		<!--<link rel="stylesheet" href="https://mobilitiworld.com//css/animate.min.css">-->
+		<!--<link rel="stylesheet" href="https://mobilitiworld.com//css/font-roboto.css">-->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<script data-ad-client="ca-pub-5658972101959340" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125039790-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125039790-1');
+</script>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--=========Turquoise Style=============-->
+
+<!-----------Ajax---------------->
+    <script type="text/javascript">
+      $(document).ready(function() {
+          var brand = 1;
+          var limit = 24;
+          $(".loading-div").show();
+           $("#results").load("fetch_products.html",{"brandid":brand, "limit":limit}, function(){ //get content from PHP page
+           $(".loading-div").hide(); //once done, hide loading element
+           });
+
+
+         $(".filtersby").on( "change", function (e){
+          e.preventDefault();
+           var price="";
+           var z=0;
+           $('#pricefilter :input:checked').each(function(){
+            	if(z==0){
+                     price += $(this).val();
+            	}
+            	else
+            	{
+            		price +="::";
+            		price += $(this).val();
+            	}
+            	z += z+1;
+          });
+          
+          var sorting = $( "#sorting" ).val();
+          var brand = 1;
+          var limit = $( "#limit" ).val();
+
+           $(".loading-div").show(); //show loading element
+           $("#results").load("fetch_products-2.html",{"brandid":brand,"price":price,"sorting":sorting, "limit":limit}, function(){ //get content from PHP page
+           $(".loading-div").hide(); //once done, hide loading element
+           });
+        });
+
+
+        $(".limit").on( "change", function (e){
+           e.preventDefault();
+           var sorting = $( "#sorting" ).val();
+           var limit = $( "#limit" ).val();
+           var brand = 1;
+           
+           var price="";
+           var z=0;
+           $('#pricefilter :input:checked').each(function(){
+        	if(z==0){
+                 price += $(this).val();
+        	}
+        	else
+        	{
+        		price +="::";
+        		price += $(this).val();
+        	}
+        	z += z+1;
+           });
+           
+           $(".loading-div").show(); //show loading element
+           $("#results").load("fetch_products-2.html",{"brandid":brand,"price":price,"sorting":sorting, "limit":limit}, function(){ //get content from PHP page
+           $(".loading-div").hide(); //once done, hide loading element
+           });
+        });
+        
+        
+        $(".dfilters").on( "change", function (e){
+		e.preventDefault();
+		$(".loading-div").show(); //show loading element
+		
+		   var price="";
+           var z=0;
+           $('#pricefilter :input:checked').each(function(){
+        	if(z==0){
+                 price += $(this).val();
+        	}
+        	else
+        	{
+        		price +="::";
+        		price += $(this).val();
+        	}
+        	z += z+1;
+        	
+        });
+
+		//alert(category);
+		
+		var brand = 1;
+        var page = $( "#page" ).val();
+		var sorting = $( "#sorting" ).val();
+		var limit = $( "#limit" ).val();
+		//var page = (this).value; //get page number from link
+	    $("#results").load("fetch_products-2.html",{"brandid":brand,"price":price,"sorting":sorting,"limit":limit}, function(){ //get content from PHP page
+			$(".loading-div").hide(); //once done, hide loading element
+		});
+    });
+    
+    
+});    
+    
+</script>
+        
+<style>
+.contents{
+
+  list-style: none;
+
+}
+.contents li{
+    margin-bottom: 10px;
+}
+.loading-div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.56);
+  z-index: 999;
+  /*display:none;*/
+}
+.loading-div img {
+    margin-top: 20%;
+    margin-left: 48%;
+    width: 8%;
+}
+</style>
+        
+</head>
+<body>
+<div class="loading-div"><img src="admin/img/loader.gif" ></div>    
+
+                
+	<header><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--<div id="cookie">
+    <p>
+      We use cookies to deliver our services and to show you ads based on your interests. By using our website, you agree to the use of cookies as described in our <a href="#">Cookie Policy</a>. 
+      &nbsp; 
+      <span id="close" onclick="javascript:nascondi()" style="cursor: pointer;">X</span>
+    </p>
+</div> -->
+<!-- ----------------------------------------Desktop view ------------------------------------------------ -->	    
+		<div class="second-nav desktop" id="sticker">
+			<div class="menu-container">
+						<nav class="navbar navbar-expand-sm mb-nav">
+							
+							<div class="collapse navbar-collapse  justify-content-center menu">
+								<ul class="navbar-nav nav-fill w-100 padding-nav">
+								 <li class="nav-item item d-none d-sm-block"><a href="index.html"><img src="img/logo.svg" class="img-fluid nav-logo" title="mobilitiworld" alt="mobilitiworld"></a></li>
+								 <li class="nav-item item"><a href="javascript:void(0)">PRODUCTS</a>
+                                      <ul class="container-fluid">
+                                          <li class="col-sm-1"></li>
+                                        <li class="col-sm-3"><div class="image-hover img-zoom-out"><a href="javascript:void(0)"><img src="img/g1.jpg" class="img-fluid"></a></div>
+                                          <ul>
+                                            <h3 class="sub_title">Handsets</h3>
+                                                                                        <li><a href="brand/samsung.html" title="Samsung">Samsung</a></li>
+                                                                                        <li><a href="brand/vivo.html" title="Vivo">Vivo</a></li>
+                                                                                        <li><a href="brand/xiaomi.html" title="Xiaomi">Xiaomi</a></li>
+                                                                                        <li><a href="brand/oppo.html" title="Oppo">Oppo</a></li>
+                                                                                        <li><a href="brand/apple.html" title="Apple">Apple</a></li>
+                                                                                        <li><a href="brand/oneplus.html" title="OnePlus">OnePlus</a></li>
+                                                                                        <li><a href="brand/realme.html" title="Realme">Realme</a></li>
+                                                                                        <li><a href="brand/nokia.html" title="NOKIA">NOKIA</a></li>
+                                                                                        <li><a href="brand/lava.html" title="LAVA">LAVA</a></li>
+                                                                                      </ul>
+                                        </li>
+                                        <li class="col-sm-3"><div class="image-hover img-zoom-out"><a href="javascript:void(0)"><img src="img/g3.jpg" class="img-fluid"></a></div>
+                                          <ul>
+                                            <h3 class="sub_title">Lifestyle</h3>
+                                                                                                        <li><a href="accessories/adaptors.html">Adaptors</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/AirPods.html">AirPods</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/BT-Headset.html">BT Headset</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/data-cables.html">Data Cables</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Ear-Bud.html">Ear Bud</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/fitness-band.html">Fitness Bands</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/headphone.html">Headphones </a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Health.html">Health</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Neck-Band.html">Neck Band</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/power-banks.html">Power Banks</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Box.html">Smart Box</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Smart-Watch.html">Smart Watch</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/PEN-DRIVE.html">Storage</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/wired-earphone.html">Wired Earphones</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Wired-Headset.html">Wired Headset</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Wireless-Earphone.html">Wireless Earphone</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Wireless-Bluetooth-Headset.html">Wireless Headset</a></li>
+                                                                
+                                                                                              </ul>
+                                        </li>
+                                        <li class="col-sm-3"><a href="javascript:void(0)"> <div class="image-hover img-zoom-out"><img src="img/g2.jpg" class="img-fluid"></a></div>
+                                          <ul>
+                                            <h3 class="sub_title">Music</h3>
+                                                                                                 <li><a href="speakers/bluetooth-speakers.html">Bluetooth Speakers</a></li>
+                                                                
+                                                                                              </ul>
+                                        </li>
+                                        
+                                      </ul>
+                                    </li>
+								 <li class="nav-item item"><a href="store-list.html">STORE</a></li>
+								 <li class="nav-item item"><a href="super-deals.html">SUPER DEALS</a></li>
+								 <li class="nav-item item"><a href="gallery.html">GALLERY</a></li>
+								 <li class="nav-item item"><a href="contact.html">CONTACT US</a></li>
+								 <li class="searc-sec nav-item item">
+											<form action="https://mobilitiworld.com//search" method="GET" class="search-container">
+                                                    <input type="text" id="search-bar" name="search" placeholder="Search" required>
+                                                   	<button type="submit" class="search-btn-bg search-icon"><span class="fa fa-search"></span></button>
+                                                  </form>
+                                </li>
+                                <li class="searc-sec nav-item ">
+                                  <a href="https://www.facebook.com/oberoitel" target="_blank"><i class="fa fa-facebook-square s-fa-icon" style="float: right;"></i></a>
+                                </li>
+                               <!-- <li class="searc-sec nav-item ">
+                                    <a href="https://www.instagram.com/thehotspotstore/" target="_blank"><i class="fa fa-instagram s-fa-icon" style="color: #fb0303;"></i></a>
+                                </li> -->
+							</ul>
+								
+								
+							</div>
+
+						</nav>
+			</div>
+		</div>
+	<!-- ----------------------------------------Desktop view end ------------------------------------------------ -->
+	
+	<!-- ----------------------------------------Mobile view ------------------------------------------------ -->
+	
+			<div class="second-nav mobile-view" id="sticker-mobile">
+			<div class="menu-container">
+						<nav class="navbar navbar-expand-sm mb-nav">
+						   <div class="row"> 
+						    <div class="col-2">
+						    <button type="button" class="navbar-toggler" data-toggle="slide-collapse" data-target="#mynav" id="open">
+								<i class="fa fa-bars" style="color: #ffc107;"></i>
+							</button>
+							<button type="button" class="navbar-toggler" data-toggle="slide-collapse" data-target="#mynav" id="close">
+								</i> <i class="fa fa-remove" style="color: #ffc107;font-size: 21px;"></i>
+							</button>
+							</div>
+							<div class="col-5">
+							<a class="navbar-brand d-block d-sm-none" href="index.html"><img src="img/logo.svg" class="img-fluid mb-logo" alt="Mobilitiworld"></a>
+						    </div>
+						   <!-- <div class="col-5 phone-icon">
+						    <i class="fa fa-phone"><a class="" href="tel:01143028641"> 01143028641</a> </i>
+							</div>-->
+							 <div class="col-12">
+							    <div class="search-mobile-view">
+						                <form action="https://mobilitiworld.com//search" method="GET" class="search-container">
+                                                    <input type="text" id="search-bar" name="search" placeholder="Search">
+                                                   	<button type="submit" class="search-btn-bg search-icon"><span class="fa fa-search"></span></button>
+                                        </form>
+                                <div>        
+							</div>
+						</div>
+							<div class="collapse navbar-collapse  justify-content-center menu" id="mynav">
+								<ul class="navbar-nav nav-fill w-100 padding-nav">
+								 <li class="nav-item item d-none d-sm-block"><a href="index.html"><img src="img/logo.png" class="img-fluid nav-logo" title="Mobilitiworld" alt="Mobilitiworld"></a></li>
+								 <li class="nav-item item"><a href="javascript:void(0)">PRODUCTS <span> <i class="fa fa-chevron-down p-icon"></i></span></a>
+                                      <ul class="container-fluid">
+                                          <li class="col-sm-1"></li>
+                                        <li class="col-sm-3"><div class="image-hover img-zoom-out"><a href="javascript:void(0)"><img src="img/g1.jpg" class="img-fluid"></a></div>
+                                          <ul>
+                                            <h3 class="sub_title">Handsets</h3>
+                                                                                        <li><a href="brand/samsung.html" title="Samsung">Samsung</a></li>
+                                                                                        <li><a href="brand/vivo.html" title="Vivo">Vivo</a></li>
+                                                                                        <li><a href="brand/xiaomi.html" title="Xiaomi">Xiaomi</a></li>
+                                                                                        <li><a href="brand/oppo.html" title="Oppo">Oppo</a></li>
+                                                                                        <li><a href="brand/apple.html" title="Apple">Apple</a></li>
+                                                                                        <li><a href="brand/oneplus.html" title="OnePlus">OnePlus</a></li>
+                                                                                        <li><a href="brand/realme.html" title="Realme">Realme</a></li>
+                                                                                        <li><a href="brand/nokia.html" title="NOKIA">NOKIA</a></li>
+                                                                                        <li><a href="brand/lava.html" title="LAVA">LAVA</a></li>
+                                                                                      </ul>
+                                        </li>
+                                        <li class="col-sm-3"><div class="image-hover img-zoom-out"><a href="#"><img src="img/g3.jpg" class="img-fluid"></a></div>
+                                          <ul>
+                                            <h3 class="sub_title">Lifestyle</h3>
+                                                                                                        <li><a href="accessories/adaptors.html">Adaptors</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/AirPods.html">AirPods</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/BT-Headset.html">BT Headset</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/data-cables.html">Data Cables</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Ear-Bud.html">Ear Bud</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/fitness-band.html">Fitness Bands</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/headphone.html">Headphones </a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Health.html">Health</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Neck-Band.html">Neck Band</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/power-banks.html">Power Banks</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Box.html">Smart Box</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Smart-Watch.html">Smart Watch</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/PEN-DRIVE.html">Storage</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/wired-earphone.html">Wired Earphones</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Wired-Headset.html">Wired Headset</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Wireless-Earphone.html">Wireless Earphone</a></li>
+                                                                
+                                                                                                        <li><a href="accessories/Wireless-Bluetooth-Headset.html">Wireless Headset</a></li>
+                                                                
+                                                                                              </ul>
+                                        </li>
+                                        <li class="col-sm-3"><a href="#"> <div class="image-hover img-zoom-out"><img src="img/g2.jpg" class="img-fluid"></a></div>
+                                          <ul>
+                                            <h3 class="sub_title">Music</h3>
+                                                                                                 <li><a href="speakers/bluetooth-speakers.html">Bluetooth Speakers</a></li>
+                                                                
+                                                                                              </ul>
+                                        </li>
+                                        
+                                      </ul>
+                                    </li>
+								 <li class="nav-item item"><a href="store-list.html">STORE</a></li>
+								 <li class="nav-item item"><a href="super-deals.html">SUPER DEALS</a></li>
+								 <li class="nav-item item"><a href="gallery.html">GALLERY</a></li>
+								 <li class="nav-item item"><a href="contact.html">CONTACT US</a></li>
+								 <li class="searc-sec nav-item item">
+											<form action="https://mobilitiworld.com//search" method="GET" class="search-container">
+                                                    <input type="text" id="search-bar" name="search" placeholder="Search" required>
+                                                   	<button type="submit" class="search-btn-bg search-icon"><span class="fa fa-search"></span></button>
+                                                  </form>
+                                </li>
+                                <li class="searc-sec nav-item ">
+                                  <a href="https://www.facebook.com/mobiliti.world/" target="_blank"><i class="fa fa-facebook-square s-fa-icon" style="float: right;"></i></a>
+                                </li>
+                               <!-- <li class="searc-sec nav-item ">
+                                    <a href="https://www.instagram.com/thehotspotstore/" target="_blank"><i class="fa fa-instagram s-fa-icon" style="color: #fb0303;"></i></a>
+                                </li> -->
+							</ul>
+								
+								
+							</div>
+
+						</nav>
+			</div>
+		</div>
+<!-- ----------------------------------------Mobile view  end------------------------------------------------ -->		<!--
+	<section class="container-full">
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <img src="https://mobilitiworld.com//img/iphone_large.jpg" alt="" class="img-fluid ">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="https://mobilitiworld.com//img/iphone_large1.jpg" alt="" class="img-fluid ">
+                  </div>
+                  <div class="carousel-item">
+                     <img src="https://mobilitiworld.com//img/iphone_large.jpg" alt="" class="img-fluid ">
+                  </div>
+            </div>
+        </div>
+	</section>
+-->
+		<div class="product-navigation">
+		        <div class="container">
+                	<div class="shop-list-1">
+			        	<div class="row">
+							<div class="col-sm-12">
+                                <ul>
+                                  <li><a href="index.html"><i class="fa fa-home"></i></a></li><i class="fa fa-angle-right" style="color: #353535;font-weight: 700;"></i>
+                                  <li>Products</li>
+                                </ul>
+                            </div>
+						</div>
+			        </div>
+		        </div>
+		</div>
+	<!-- Newsfeed -->
+	<div class="product-area">
+		<div class="container">
+			<div class="shop-list m-b">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+					   <div class="view-cateory ">
+					       <p>More Category  <i class="fa fa-chevron-down p-icon" id="open-tab"></i> <i class="fa fa-chevron-up p-icon" id="close-tab"></i></p>
+					   </div> 
+						<div class="cate-list" id="cate-list">
+						    <h3>Mobile Brands</h3>
+						    							<ul>
+															<li class=""><a href="brand/samsung.html">Samsung</a><span class="totalP"> [90] </span> </li>
+							 															<li class=""><a href="brand/vivo.html">Vivo</a><span class="totalP"> [28] </span> </li>
+							 															<li class=""><a href="brand/xiaomi.html">Xiaomi</a><span class="totalP"> [40] </span> </li>
+							 															<li class=""><a href="brand/oppo.html">Oppo</a><span class="totalP"> [40] </span> </li>
+							 															<li class=""><a href="brand/apple.html">Apple</a><span class="totalP"> [78] </span> </li>
+							 															<li class=""><a href="brand/oneplus.html">OnePlus</a><span class="totalP"> [9] </span> </li>
+							 															<li class=""><a href="brand/realme.html">Realme</a><span class="totalP"> [17] </span> </li>
+							 															<li class=""><a href="brand/nokia.html">NOKIA</a><span class="totalP"> [0] </span> </li>
+							 															<li class=""><a href="brand/lava.html">LAVA</a><span class="totalP"> [0] </span> </li>
+							 														</ul>
+							
+							<h3>Accessories</h3>
+						    							<ul>
+							                        								<li class=""><a href="accessories/adaptors.html">Adaptors</a> </li>
+							    								<li class=""><a href="accessories/AirPods.html">AirPods</a> </li>
+							    								<li class=""><a href="accessories/BT-Headset.html">BT Headset</a> </li>
+							    								<li class=""><a href="accessories/data-cables.html">Data Cables</a> </li>
+							    								<li class=""><a href="accessories/Ear-Bud.html">Ear Bud</a> </li>
+							    								<li class=""><a href="accessories/fitness-band.html">Fitness Bands</a> </li>
+							    								<li class=""><a href="accessories/headphone.html">Headphones </a> </li>
+							    								<li class=""><a href="accessories/Health.html">Health</a> </li>
+							    								<li class=""><a href="accessories/Neck-Band.html">Neck Band</a> </li>
+							    								<li class=""><a href="accessories/power-banks.html">Power Banks</a> </li>
+							    								<li class=""><a href="accessories/Box.html">Smart Box</a> </li>
+							    								<li class=""><a href="accessories/Smart-Watch.html">Smart Watch</a> </li>
+							    								<li class=""><a href="accessories/PEN-DRIVE.html">Storage</a> </li>
+							    								<li class=""><a href="accessories/wired-earphone.html">Wired Earphones</a> </li>
+							    								<li class=""><a href="accessories/Wired-Headset.html">Wired Headset</a> </li>
+							    								<li class=""><a href="accessories/Wireless-Earphone.html">Wireless Earphone</a> </li>
+							    								<li class=""><a href="accessories/Wireless-Bluetooth-Headset.html">Wireless Headset</a> </li>
+							    							</ul>
+							
+							<h3>Speakers</h3>
+						    							<ul>
+							                        								<li class=""><a href="speakers/bluetooth-speakers.html">Bluetooth Speakers</a> </li>
+							    							</ul>
+							
+							 <h3>Price</h3>
+								<ul class="list-group filterss fl-title-name" id="pricefilter">
+								    <a class="list-group-item "><input type="checkbox" id="pricee-1" name="pricee" class="fl-title-name dfilters" value="0::1000"> &nbsp; Below - ₹1,000</a>
+								    <a class="list-group-item "><input type="checkbox" id="pricee-1" name="pricee" class="fl-title-name dfilters" value="1000::3000"> &nbsp; ₹1,000 - ₹3,000</a>
+									<a class="list-group-item "><input type="checkbox" id="pricee-1" name="pricee" class="fl-title-name dfilters" value="3000::5000"> &nbsp; ₹3,000 - ₹5,000</a>
+									<a class="list-group-item "><input type="checkbox" id="pricee-2" name="pricee" class="fl-title-name dfilters" value="5000::10000"> &nbsp; ₹5,000 - ₹10,000</a>
+									<a class="list-group-item "><input type="checkbox" id="pricee-3" name="pricee" class="fl-title-name dfilters" value="10000::20000"> &nbsp; ₹10,000 - ₹20,000</a>
+									<a class="list-group-item "><input type="checkbox" id="pricee-4" name="pricee" class="fl-title-name dfilters" value="20000::40000"> &nbsp; ₹20,000 - ₹40,000</a>
+									<a class="list-group-item "><input type="checkbox" id="pricee-4" name="pricee" class="fl-title-name dfilters" value="40000::100000"> &nbsp; ₹40,000 - and Above</a>
+								</ul>
+						</div>
+					</div>
+					<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+						<div class="row" style="margin-bottom:10px;">
+							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+								<p class="brandheadline">Smartphones & Accessories</p>
+							</div>
+							<div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-6">
+								<select class="form-control form-box mb-pos filtersby" id="sorting">
+                                    <option  selected="selected" disabled="disabled" >Sort by:Featured</option>
+                                    <option value="order by name ASC">Name (A-Z)</option>
+                                    <option value="order by name DESC">Name (Z-A)</option>
+                                    <option value="ORDER BY `product`.`retailprice` ASC">Price (Low to High)</option>
+                                    <option value="ORDER BY `product`.`retailprice` DESC">Price (High to Low)</option>
+								</select>
+							</div>
+							<div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-6">
+								<select class="form-control form-box mb-pos limit" id="limit">
+									<option value="25" selected="selected" >Show 25 Products</option>
+                                    <option value="50"><i class="fa fa-inr" aria-hidden="true"></i>50</option>
+                                    <option value="150"><i class="fa fa-inr" aria-hidden="true"></i>150</option>
+                                    <option value="200"><i class="fa fa-inr" aria-hidden="true"></i>200</option>
+								</select>
+							</div>
+						</div>
+						
+					    <!--show here all product start -->
+						    <div id="results" ></div>
+						<!--show here all product end -->
+						
+					</div>
+				</div>
+		</div>
+	</div>
+	<!-- footer -->
+<!--<ul class="menu_inner bottomLeft bottomWhatsapp">
+<li class="share right">
+<a href="https://api.whatsapp.com/send?phone=+91 9540798579&amp;text=Hi! I have a query. Could you ask someone to contact me. Thanks! https://mobilitiworld.com/" target="_blank" class="intro-banner-vdo-play-btn pinkBg">
+<i class="fa fa-whatsapp whiteText1" aria-hidden="true"></i>
+<i class="fa fa-whatsapp1 whiteText" aria-hidden="true"></i>
+<i class="fa fa-whatsapp1 whiteText" aria-hidden="true"></i>
+<i class="fa fa-whatsapp1 whiteText" aria-hidden="true"></i>
+</a>
+</li>
+</ul>-->
+	<footer>
+		<div class="footer-area">
+			<div class="_1EgM1b">
+				<div class="row address">
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+						<div class="justify-content-center newslatter">
+							<h3>INFORMATION</h3>
+							<ul class="nav-fill w-100">
+							<!---	<li><a href="">Documents & Drivers</a></li>--->
+								<li><a href="about-us.html">About Us</a></li>
+								<li><a href="our-team.html">Our Team</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="privacy_policy.html">Privacy Policy</a></li>
+								<!--<li><a href="https://mobilitiworld.com//#">Return Policy</a></li>
+								<li><a href="https://mobilitiworld.com//#">Terms and Conditions</a></li>-->
+							</ul>
+						</div>
+					</div>
+					
+					<div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12">
+						<div class="newslatter" style="margin-top: 15px;">
+						    <div class="social-icon-fa img-fa">
+    							<img src="img/contact-image.jpg" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				   <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-12"></div>
+					
+					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+						<div class="newslatter">
+						    <h3>OUR EMI PARTNERS</h3>
+						    <div class="social-icon-fa img-fa">
+    							<img src="img/footer-pattaner.png" class="img-fluid">
+    						
+							</div>
+						 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-end">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+							<p style="padding-top:0px;">Copyright @ 2020 Mobiliti World. All Rights Reserved.</p>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+							<p class="p-1"><a href="https://www.udhim.com/" target="_blank" style="color:#b7b7b7;">Proudly designed & developed by UDHIM<span>TECHNOLOGY</span></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+     //show Success message start
+      $(document).ready(function(){
+      $(".subscribe").fadeOut(10000);   
+    });
+    </script>
+	
+	
+	
+	<!-- all js file here -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/megamenu.js"></script>
+	<script src="js/custom.js"></script>
+	
+	<script>
+		$('[data-toggle="slide-collapse"]').on('click', function() {
+			$navMenuCont = $($(this).data('target'));
+			$navMenuCont.animate({'width':'toggle'}, 350);
+		});
+	</script>
+	<script>
+		var s1 = $("#sticker");
+		var pos1 = s1.position();					   
+		$(window).scroll(function() {
+			var windowpos = $(window).scrollTop();
+			if (windowpos > pos1.top) {
+			s1.addClass("stick");
+			} else {
+				s1.removeClass("stick");	
+			}
+		});
+		</script>
+		<script>
+		var s = $("#sticker-mobile");
+		var pos = s.position();					   
+		$(window).scroll(function() {
+			var windowpos = $(window).scrollTop();
+			if (windowpos > pos.top) {
+			s.addClass("stick");
+			} else {
+				s.removeClass("stick");	
+			}
+		});
+	</script>
+	   <script>
+        var swiper = new Swiper({
+            el: '.swiper-container',
+            initialSlide: 4,
+            spaceBetween: 0,
+            slidesPerView: 4,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            
+            mousewheel: {
+              enabled: false,
+            },
+            keyboard: {
+              enabled: true,
+            },
+            loop: true,
+            autoplayDisableOnInteraction: false,
+            
+           
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+              breakpoints: {
+                1024: {
+                  slidesPerView: 4,
+                  initialSlide: 1,
+                  spaceBetween: 0,
+                  
+                },
+                768: {
+                  slidesPerView: 3,
+                  initialSlide: 1,
+                  spaceBetween: 0,
+                },
+                640: {
+                  slidesPerView: 3,
+                  initialSlide: 1,
+                  spaceBetween: 0,
+                  
+                },
+                 411: {
+                  slidesPerView: 1,
+                  initialSlide: 1,
+                  spaceBetween: 0,
+                 
+                },
+                320: {
+                  slidesPerView: 1,
+                  initialSlide: 1,
+                  spaceBetween: 0,
+                 
+                }
+                
+              }
+        });
+    </script>
+	  <script>
+		var swiper = new Swiper('.swiper-container', {
+		  slidesPerView: 4,
+		  spaceBetween: 0,
+		});
+	  </script>
+	  <script>
+		$(document).ready(function(){
+			$("#retail").click(function(){
+				$("#loginform").show();
+				$("#wholesaleform").hide();
+			});
+			$("#wholesale").click(function(){
+				$("#loginform").hide();
+				$("#wholesaleform").show();
+			});
+		});
+	  </script>
+</body>
+
+<!-- Mirrored from mobilitiworld.com//products by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Dec 2021 06:43:18 GMT -->
+</html>

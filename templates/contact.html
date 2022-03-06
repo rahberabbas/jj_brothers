@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+
+<div class="product-navigation">
+    <div class="container">
+        <div class="shop-list-1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-home"></i></a></li><i class="fa fa-angle-right"
+                            style="color: #353535;font-weight: 700;"></i>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login -->
+
+<div class="section">
+    <div class="_1EgM1b">
+        <div class="row padding_100">
+
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12	col-12 contact-details">
+                <img src="{% static 'img/address.png' %}" class="img-fluid add_red">
+                <div class="br-vetrticle"></div>
+                <h4> Address</h4>
+                <p>Counnat Place, Delhi, India</p>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 contact-details">
+                <img src="{% static 'img/mobile.png' %}" class="img-fluid add_red">
+                <div class="br-vetrticle"></div>
+                <h4>Contact Number</h4>
+                <p>+91 9876543210</p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 contact-details">
+                <img src="{% static 'img/envolop.png' %}" class="img-fluid add_red">
+                <div class="br-vetrticle"></div>
+                <h4>Email</h4>
+                <p>jhondoe@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-us-section">
+    <div class="_1EgM1b">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3	col-12 contact-information"></div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6	col-12 contact-information"
+                style="background: #f4f5f4;">
+                <center>
+                    <h2 style="padding-top: 20px;padding-bottom: 20px;">Get in Touch </h2>
+                </center>
+                <form action=""  >
+                    <span id="head" class="color-error"></span>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6	col-12">
+                            <!--<lable><span><sup style="color:#e41e2b;">*</sup></span>  <span id="p1" class="color-error"></span></lable>-->
+                            <div class="form-group">
+
+                                <input type="text" name="name" id="name" class="form-control form-box"
+                                    placeholder="Name*">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6	col-12">
+                            <!--<lable><span><sup style="color:#e41e2b;">*</sup></span>  <span id="p2" class="color-error"></span></lable>-->
+                            <div class="form-group">
+
+                                <input type="email" name="email" id="email" class="form-control form-box"
+                                    placeholder="Email*" maxlength="30">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px;padding-bottom: 20px;">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6	col-12">
+
+                            <!--<lable><span><sup style="color:#e41e2b;">*</sup></span> <span id="p3" class="color-error"></span></lable>-->
+                            <div class="form-group">
+                                <input type="text" name="mobile" id="mobile" class="form-control form-box"
+                                    placeholder="Mobile*" pattern="[789][0-9]{9}"
+                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                    maxlength="10">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6	col-12">
+
+                            <!--<lable><span><sup style="color:#e41e2b;">*</sup></span> <span id="p4" class="color-error"></span></lable>-->
+                            <div class="form-group">
+                                <input type="text" name="address" id="address" class="form-control form-box"
+                                    placeholder="Address*" maxlength="150">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                            <lable> <span id="p5" class="color-error"></span></lable>
+                            <div class="form-group">
+                                <textarea cols="5" rows="5" class="form-control form-box message-area"
+                                    name="message" id="message" maxlength="150"
+                                    placeholder="Message"></textarea>
+                            </div>
+
+                            <center><button class="clk-btn"><a class="enquiry-btn" href="#"
+                                        role="button"><strong>Submit</strong></a></button></center>
+                        </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+{% endblock  %}
+
+
+
+

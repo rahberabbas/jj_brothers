@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="product-navigation">
+    <div class="container">
+        <div class="shop-list-1">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul>
+                      <li><a href="index.html"><i class="fa fa-home"></i></a></li><i class="fa fa-angle-right" style="color: #353535;font-weight: 700;"></i>
+                      <li>Products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsfeed -->
+<div class="product-area">
+    
+<div class="container">
+    
+<div class="shop-list m-b">
+    
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+           <div class="view-cateory ">
+               <p>More Category  <i class="fa fa-chevron-down p-icon" id="open-tab"></i> <i class="fa fa-chevron-up p-icon" id="close-tab"></i></p>
+           </div> 
+            <div class="cate-list" id="cate-list">
+                <h3>Mobile Brands</h3>
+                                            <ul>
+                                                <li class=""><a href="brand/samsung.html">Samsung</a><span class="totalP"> [90] </span> </li>
+                                                                             <li class=""><a href="brand/vivo.html">Vivo</a><span class="totalP"> [28] </span> </li>
+                                                                             <li class=""><a href="brand/xiaomi.html">Xiaomi</a><span class="totalP"> [40] </span> </li>
+                                                                             <li class=""><a href="brand/oppo.html">Oppo</a><span class="totalP"> [40] </span> </li>
+                                                                             <li class=""><a href="brand/apple.html">Apple</a><span class="totalP"> [78] </span> </li>
+                                                                             <li class=""><a href="brand/oneplus.html">OnePlus</a><span class="totalP"> [9] </span> </li>
+                                                                             <li class=""><a href="brand/realme.html">Realme</a><span class="totalP"> [17] </span> </li>
+                                                                             <li class=""><a href="brand/nokia.html">NOKIA</a><span class="totalP"> [0] </span> </li>
+                                                                             <li class=""><a href="brand/lava.html">LAVA</a><span class="totalP"> [0] </span> </li>
+                                                                         </ul>
+                
+                <h3>Accessories</h3>
+                                            <ul>
+                                                                        <li class=""><a href="accessories/adaptors.html">Adaptors</a> </li>
+                                                    <li class=""><a href="accessories/AirPods.html">AirPods</a> </li>
+                                                    <li class=""><a href="accessories/BT-Headset.html">BT Headset</a> </li>
+                                                    <li class=""><a href="accessories/data-cables.html">Data Cables</a> </li>
+                                                    <li class=""><a href="accessories/Ear-Bud.html">Ear Bud</a> </li>
+                                                    <li class=""><a href="accessories/fitness-band.html">Fitness Bands</a> </li>
+                                                    <li class=""><a href="accessories/headphone.html">Headphones </a> </li>
+                                                    <li class=""><a href="accessories/Health.html">Health</a> </li>
+                                                    <li class=""><a href="accessories/Neck-Band.html">Neck Band</a> </li>
+                                                    <li class=""><a href="accessories/power-banks.html">Power Banks</a> </li>
+                                                    <li class=""><a href="accessories/Box.html">Smart Box</a> </li>
+                                                    <li class=""><a href="accessories/Smart-Watch.html">Smart Watch</a> </li>
+                                                    <li class=""><a href="accessories/PEN-DRIVE.html">Storage</a> </li>
+                                                    <li class=""><a href="accessories/wired-earphone.html">Wired Earphones</a> </li>
+                                                    <li class=""><a href="accessories/Wired-Headset.html">Wired Headset</a> </li>
+                                                    <li class=""><a href="accessories/Wireless-Earphone.html">Wireless Earphone</a> </li>
+                                                    <li class=""><a href="accessories/Wireless-Bluetooth-Headset.html">Wireless Headset</a> </li>
+                                                </ul>
+                
+                <h3>Speakers</h3>
+                                            <ul>
+                                                                        <li class=""><a href="speakers/bluetooth-speakers.html">Bluetooth Speakers</a> </li>
+                                                </ul>
+                
+                 <h3>Price</h3>
+                    <ul class="list-group filterss fl-title-name" id="pricefilter">
+                        <a class="list-group-item "><input type="checkbox" id="pricee-1" name="pricee" class="fl-title-name dfilters" value="0::1000"> &nbsp; Below - ₹1,000</a>
+                        <a class="list-group-item "><input type="checkbox" id="pricee-1" name="pricee" class="fl-title-name dfilters" value="1000::3000"> &nbsp; ₹1,000 - ₹3,000</a>
+                        <a class="list-group-item "><input type="checkbox" id="pricee-1" name="pricee" class="fl-title-name dfilters" value="3000::5000"> &nbsp; ₹3,000 - ₹5,000</a>
+                        <a class="list-group-item "><input type="checkbox" id="pricee-2" name="pricee" class="fl-title-name dfilters" value="5000::10000"> &nbsp; ₹5,000 - ₹10,000</a>
+                        <a class="list-group-item "><input type="checkbox" id="pricee-3" name="pricee" class="fl-title-name dfilters" value="10000::20000"> &nbsp; ₹10,000 - ₹20,000</a>
+                        <a class="list-group-item "><input type="checkbox" id="pricee-4" name="pricee" class="fl-title-name dfilters" value="20000::40000"> &nbsp; ₹20,000 - ₹40,000</a>
+                        <a class="list-group-item "><input type="checkbox" id="pricee-4" name="pricee" class="fl-title-name dfilters" value="40000::100000"> &nbsp; ₹40,000 - and Above</a>
+                    </ul>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+            <div class="row" style="margin-bottom:10px;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <p class="brandheadline">Smartphones & Accessories</p>
+                </div>
+                {% comment %} <div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-6">
+                    
+                    <select class="form-control form-box mb-pos filtersby" id="sorting">
+                        <option  selected="selected" disabled="disabled" >Sort by:Featured</option>
+                        <option value="order by name ASC">Name (A-Z)</option>
+                        <option value="order by name DESC">Name (Z-A)</option>
+                        <option value="ORDER BY `product`.`retailprice` ASC">Price (Low to High)</option>
+                        <option value="ORDER BY `product`.`retailprice` DESC">Price (High to Low)</option>
+                    </select>
+                </div>
+                <div class="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-6">
+                    <select class="form-control form-box mb-pos limit" id="limit">
+                        <option value="25" selected="selected" >Show 25 Products</option>
+                        <option value="50"><i class="fa fa-inr" aria-hidden="true"></i>50</option>
+                        <option value="150"><i class="fa fa-inr" aria-hidden="true"></i>150</option>
+                        <option value="200"><i class="fa fa-inr" aria-hidden="true"></i>200</option>
+                    </select>
+                </div> {% endcomment %}
+            </div>
+            
+            <!--show here all product start -->
+                <div id="results" >
+            
+                        <div class="row">
+                            {% for i in prod %}
+                          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                            
+                            <div class="pro-shop effct">
+                              <a href="{% url 'detail' i.id %}"
+                                title="{{i.name}} - {{i.discrimination}}">
+                                <img src="{% static 'img/View.png' %}" class="img-fluid mx-auto  hover-icon" alt="Cactus Living">
+                                <img src="{{i.image.url}}"
+                                  class="img-fluid mx-auto d-block shop-product-img" alt="Cactus Living">
+                                <h3>{{i.name}}</h3>
+                                <h3>{{i.discrimination}}</h3>
+                                <p>₹ {{i.price}}</p>
+                              </a>
+                              <center> <button class="clk-btn-2">Buy on WhatsApp</button>
+                              </center>
+                            </div>
+                            
+                          </div>
+                          {% endfor %}
+                        </div>
+                       
+                      </div>
+            <!--show here all product end -->
+            
+        </div>
+    </div>
+    
+</div>
+</div>
+
+
+{% endblock %}
