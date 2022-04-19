@@ -39,15 +39,7 @@
                           class="img-fluid"></a></div>
                     <ul>
                       <h3 class="sub_title">Handsets</h3>
-                      <li><a href="{% url 'products' %}" title="Samsung">2nd Hand Mobile</a></li>
-                      {% comment %} <li><a href="" title="Vivo">Vivo</a></li>
-                      <li><a href="" title="Xiaomi">Xiaomi</a></li>
-                      <li><a href="" title="Oppo">Oppo</a></li>
-                      <li><a href="" title="Apple">Apple</a></li>
-                      <li><a href="" title="OnePlus">OnePlus</a></li>
-                      <li><a href="" title="Realme">Realme</a></li>
-                      <li><a href="" title="NOKIA">NOKIA</a></li>
-                      <li><a href="" title="LAVA">LAVA</a></li> {% endcomment %}
+                      <li><a href="/products/?category=1" title="Samsung">2nd Hand Mobile</a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
@@ -55,42 +47,12 @@
                           class="img-fluid"></a></div>
                     <ul>
                       <h3 class="sub_title">Lifestyle</h3>
-                      {% comment %} <li><a href="">Adaptors</a></li> {% endcomment %}
 
-                      <li><a href="{% url 'products' %}">AirPods</a></li>
+                      <li><a href="/products/?category=3">AirPods</a></li>
 
-                      {% comment %} <li><a href="">BT Headset</a></li>
-
-                      <li><a href="">Data Cables</a></li>
-
-                      <li><a href="">Ear Bud</a></li>
-
-                      <li><a href="">Fitness Bands</a></li>
-
-                      <li><a href="">Headphones </a></li> {% endcomment %}
-
-                      {% comment %} <li><a href="">Health</a></li>
-
-                      <li><a href="">Neck Band</a></li>
-
-                      <li><a href="">Power Banks</a></li>
-
-                      <li><a href="">Smart Box</a></li> {% endcomment %}
-
-                      <li><a href="{% url 'products' %}">Smart Watch</a></li>
-                      <li><a href="{% url 'products' %}">Back Cover</a></li>
-                      <li><a href="{% url 'products' %}">Temperd Glass</a></li>
-
-                      {% comment %} <li><a href="">Storage</a></li>
-
-                      <li><a href="">Wired Earphones</a></li>
-
-                      <li><a href="">Wired Headset</a></li>
-
-                      <li><a href="">Wireless Earphone</a></li>
-
-                      <li><a href="">Wireless Headset</a></li> {% endcomment %}
-
+                      <li><a href="/products/?category=2">Smart Watch</a></li>
+                      <li><a href="/products/?category=7">Back Cover</a></li>
+                      <li><a href="/products/?category=8">Temperd Glass</a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3"><a href="javascript:void(0)">
@@ -99,7 +61,7 @@
           </div>
           <ul>
             <h3 class="sub_title">Music</h3>
-            <li><a href="{% url 'products' %}">Bluetooth Speakers</a></li>
+            <li><a href="/products/?category=9">Bluetooth Speakers</a></li>
 
           </ul>
           </li>
@@ -108,10 +70,10 @@
           </li>
           <li class="nav-item item"><a href="">SUPER DEALS</a></li>
           <li class="nav-item item"><a href="">GALLERY</a></li>
-          <li class="nav-item item"><a href="#">CONTACT US</a></li>
+          <li class="nav-item item"><a href="{% url 'contact' %}">CONTACT US</a></li>
           <li class="searc-sec nav-item item">
-            <form action="" method="GET" class="search-container">
-              <input type="text" id="search-bar" name="search" placeholder="Search" required>
+            <form method="GET" action="{% url 'search' %}">
+              <input type="text" id="search-bar" name="q" placeholder="Search" required>
               <button type="submit" class="search-btn-bg search-icon"><span class="fa fa-search"></span></button>
             </form>
           </li>
@@ -152,8 +114,8 @@
 							</div>-->
             <div class="col-12">
               <div class="search-mobile-view">
-                <form action="" method="GET" class="search-container">
-                  <input type="text" id="search-bar" name="search" placeholder="Search">
+                <form action="{% url 'search' %}" method="GET" class="search-container">
+                  <input type="text" id="search-bar" name="q" placeholder="Search">
                   <button type="submit" class="search-btn-bg search-icon"><span class="fa fa-search"></span></button>
                 </form>
                 <div>
@@ -172,7 +134,7 @@
                               class="img-fluid"></a></div>
                         <ul>
                           <h3 class="sub_title">Handsets</h3>
-                          <li><a href="{% url 'products' %}" title="Samsung">2nd Hand Mobile</a></li>
+                          <li><a href="/products/?category=1" title="Samsung">2nd Hand Mobile</a></li>
                         </ul>
                       </li>
                       <li class="col-sm-3">
@@ -180,29 +142,11 @@
                         </div>
                         <ul>
                           <h3 class="sub_title">Lifestyle</h3>
-                          <li><a href="{% url 'products' %}">AirPods</a></li>
+                          <li><a href="/products/?category=3">AirPods</a></li>
 
-                      {% comment %} <li><a href="">BT Headset</a></li>
-
-                      <li><a href="">Data Cables</a></li>
-
-                      <li><a href="">Ear Bud</a></li>
-
-                      <li><a href="">Fitness Bands</a></li>
-
-                      <li><a href="">Headphones </a></li> {% endcomment %}
-
-                      {% comment %} <li><a href="">Health</a></li>
-
-                      <li><a href="">Neck Band</a></li>
-
-                      <li><a href="">Power Banks</a></li>
-
-                      <li><a href="">Smart Box</a></li> {% endcomment %}
-
-                      <li><a href="{% url 'products' %}">Smart Watch</a></li>
-                      <li><a href="{% url 'products' %}">Back Cover</a></li>
-                      <li><a href="{% url 'products' %}">Temperd Glass</a></li>
+                      <li><a href="/products/?category=2">Smart Watch</a></li>
+                      <li><a href="/products/?category=7">Back Cover</a></li>
+                      <li><a href="/products/?category=8">Temperd Glass</a></li>
                         </ul>
                       </li>
                       <li class="col-sm-3"><a href="#">
@@ -211,7 +155,7 @@
               </div>
               <ul>
                 <h3 class="sub_title">Music</h3>
-                <li><a href="{% url 'products' %}">Bluetooth Speakers</a></li>
+                <li><a href="/products/?category=9">Bluetooth Speakers</a></li>
 
               </ul>
               </li>
@@ -220,7 +164,7 @@
               </li>
               <li class="nav-item item"><a href="">SUPER DEALS</a></li>
               <li class="nav-item item"><a href="">GALLERY</a></li>
-              <li class="nav-item item"><a href="">CONTACT US</a></li>
+              <li class="nav-item item"><a href="{% url 'contact' %}">CONTACT US</a></li>
               <li class="searc-sec nav-item item">
                 <form action="" method="GET" class="search-container">
                   <input type="text" id="search-bar" name="search" placeholder="Search" required>

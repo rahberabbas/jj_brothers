@@ -6,8 +6,14 @@ class Category(models.Model):
     def __str__(self):
         return self.category
 
-class Product(models.Model):
+class SubCategory(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    sub_category = models.CharField(max_length=256, null=True, blank=True) 
+    def __str__(self):
+        return self.sub_category
+
+class Product(models.Model):
+    category = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
     name = models.CharField(max_length=256, null=True, blank=True)
     discrimination = models.CharField(max_length=256, null=True, blank=True)
     company = models.CharField(max_length=256, null=True, blank=True)
